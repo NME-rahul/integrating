@@ -31,28 +31,28 @@
 
 
 * if any device start communication, let device 3 start communication:
-        |supervisor pin |       |devices no     |       |device pin     |
-        |---------------|       |---------------|       |---------------|
-        |HIGH           |       |1              |       |LOW            |
-        |HIGH           |       |2              |       |LOW            |
-        |LOW            |       |3(starts)      |       |HIGH           |
-        |HIGH           |       |4              |       |LOW            |
-        |.              |       |.              |       |.              |
-        |.              |       |.              |       |.              |
-        |.              |       |.              |       |.              |
-        |HIGH           |       |n              |       |LOW            |
+        |supervisor pin |       devices no     |       device pin    |
+        |---------------|       ---------------|       ---------------|
+        |HIGH           |       1              |       LOW            |
+        |HIGH           |       2              |       LOW            |
+        |LOW            |       3(starts)      |       HIGH           |
+        |HIGH           |       4              |       LOW            |
+        |.              |       .              |       .              |
+        |.              |       .              |       .              |
+        |.              |       .              |       .              |
+        |HIGH           |       n              |       LOW            |
 
 * else
-        |supervisor pin |       |devices no     |       |device pin     |
-        |---------------|       |---------------|       |---------------|
-        |LOW            |       |1              |       |LOW            |
-        |LOW            |       |2              |       |LOW            |
-        |LOW            |       |3              |       |LOW            |
-        |LOW            |       |4              |       |LOW            |
-        |.              |       |.              |       |.              |
-        |.              |       |.              |       |.              |
-        |.              |       |.              |       |.              |
-        |LOW            |       |n              |       |LOW            |
+        |supervisor pin |       devices no     |       device pin     |
+        |---------------|       ---------------|       ---------------|
+        |LOW            |       1              |       LOW            |
+        |LOW            |       2              |       LOW            |
+        |LOW            |       3              |       LOW            |
+        |LOW            |       4              |       LOW            |
+        |.              |       .              |       .              |
+        |.              |       .              |       .              |
+        |.              |       .              |       .              |
+        |LOW            |       n              |       LOW            |
 
 
 #### cons:

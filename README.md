@@ -5,7 +5,7 @@
 
 ### Supervisory node:
 * this will work based on queue structure.
-* each device will do operation in a certain time quanta in which device can communicate with supervisor and read/write memory.
+* each device can only perform read/write operation in a certain time quanta in which device can communicate with supervisor and read/write on memory.
 
 #### pros:
 * easy to implement.
@@ -65,12 +65,15 @@
 
 #### solution:
 * we can implement a queue in the devices so that it can sense link and do other operations, repeatdly.
+* add the device who try to read/write on memory in queue and after completion of previous device the device nexxt in queue will perform the read/write.
+
+# One-Way
 
 ## Input Based
 
 * A device will be connected to the supervisory node with two lines.
   * 1: when supervisor has input for device, and it wants to wake the device for read/write.
-  * 2: when the device wants to read/write.
+  * 2: when the device wants to read/write on memory.
 
 **supervisor**
 * Create a Local server(run in supervisor node), and use it as a input device while giving input through local server provide the name/number of the device for the for the input is.
@@ -88,7 +91,7 @@
 
 ---
 
-#### Why this slots will not work in "slot based" technique?
+#### Why thhese slots will not work in "slot based" technique?
 * beacuse the device is able to sense the link on it's slot and it can miss it's slot beacuse the devices not have same cpu clock speed. this condition can occur in "open when needed" technique but frequency is very low beacuse we are implemeting queue only in one side(device).
-* we know device won't access much memory. 
+* we know device won't access memory much. 
 * we can sync the all the device by time delay but in this way we will waste the computation power of higher speed devices.
